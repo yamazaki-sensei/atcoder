@@ -1,6 +1,6 @@
 package abc088
 
-fun readIntArray(): List<Int> {
+private fun readIntArray(): List<Int> {
     return readLine()!!.split(" ").map{ it.toInt() }
 }
 
