@@ -1,3 +1,5 @@
+package abc089
+
 private fun readIntArray(): List<Int> {
     return readLine()!!.split(" ").map{ it.toInt() }
 }
@@ -11,5 +13,15 @@ private fun readTextArray(): List<String> {
 }
 
 fun main(args: Array<String>) {
+    val N = readInt()
+    val S = readTextArray()
 
+    for(s in S) {
+        if(s == "Y") {
+            print("Four")
+            return
+        }
+    }
+
+    print("Three")
 }
