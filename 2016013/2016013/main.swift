@@ -35,4 +35,26 @@ class B {
     }
 }
 
-B.solve()
+class C {
+    static func solve() {
+        let NK = readLine()!.split(separator: " ")
+        let N = Int(NK[0])!
+        let K = Int(NK[1])!
+        let As = readLine()!.split(separator: " ").map { Int($0)! }
+        var affects = Array<Int>(repeating: 0, count: N)
+        (0..<N).forEach { (i) in
+            let A = As[i]
+            (0..<N).forEach { (j) in
+                var diff = abs(i - j)
+                if diff > K {
+                    diff = 0
+                }
+                print(diff)
+                affects[i] += K - diff + A
+            }
+        }
+        print(affects)
+    }
+}
+
+C.solve()
